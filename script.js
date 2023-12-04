@@ -7,14 +7,44 @@ const correctAnswers = [
   "mark-zuckerberg"
 ];
 
+let score = 0;
+
 // Check for correct answers
 function checkAnswer() {
+  // Reset score to 0
+  score = 0;
   // Loop through each questions' answer
   for (let i = 1; i <= 5; i++) {
     const answers = document.querySelectorAll(`input[name="question-${i}"]`);
 
     setFeedbackMessage(answers, i);
   }
+
+  let scoreMessage;
+
+  // Set score message
+  switch(score) {
+    case 1:
+      scoreMessage = `<span class="fw-semibold text-primary">Poor</span> 👎🏻. Your score is <span class="fw-semibold text-primary">${score}</span>/5.`;
+      break;
+    case 2:
+      scoreMessage = `<span class="fw-semibold text-primary">Fair</span> 👌🏻. Your score is <span class="fw-semibold text-primary">${score}</span>/5.`;
+      break;
+    case 3:
+      scoreMessage = `<span class="fw-semibold text-primary">Average</span> 👍🏻. Your score is <span class="fw-semibold text-primary">${score}</span>/5.`;
+      break;
+    case 4:
+      scoreMessage = `<span class="fw-semibold text-primary">Good</span> 😎. Your score is <span class="fw-semibold text-primary">${score}</span>/5.`;
+      break;
+    case 5:
+      scoreMessage = `<span class="fw-semibold text-primary">Excellent</span> 🤩! Your score is <span class="fw-semibold text-primary">${score}</span>/5.`;
+      break;
+    default:
+      scoreMessage = `<span class="fw-semibold text-primary">Terrible</span> 😭. Your score is <span class="fw-semibold text-primary">${score}</span>/5.`;
+      break;
+  }
+
+  document.getElementById("score").innerHTML = scoreMessage;
 }
 
 // Set feedback message for each question
@@ -28,6 +58,8 @@ function setFeedbackMessage(answers, counter) {
     if (answers[i].checked && answers[i].value === correctAnswers[counter - 1]) {
       message.classList.add("text-success");
       message.innerHTML = "😀 Correct";
+      // Add score by 1
+      score++;
       return;
     }
     // Check if user selected an answer but the answer is wrong
@@ -44,7 +76,7 @@ function setFeedbackMessage(answers, counter) {
   }
 }
 
-// Reset user's selection and feedback message
+// Reset user's selection, feedback message and score
 function resetAll() {
   for (let i = 1; i <= 5; i++) {
     const answers = document.querySelectorAll(`input[name="question-${i}"]`);
@@ -53,6 +85,8 @@ function resetAll() {
     resetSelection(answers);
     message.classList.remove("text-success", "text-danger");
     message.innerHTML = "";
+    document.getElementById("score").innerHTML = "";
+    score = 0;
   }
 }
 
