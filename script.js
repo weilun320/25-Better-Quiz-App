@@ -43,3 +43,22 @@ function setFeedbackMessage(answers, counter) {
     }
   }
 }
+
+// Reset user's selection and feedback message
+function resetAll() {
+  for (let i = 1; i <= 5; i++) {
+    const answers = document.querySelectorAll(`input[name="question-${i}"]`);
+    const message = document.getElementById(`answer-${i}`);
+
+    resetSelection(answers);
+    message.classList.remove("text-success", "text-danger");
+    message.innerHTML = "";
+  }
+}
+
+// Uncheck all radio buttons
+function resetSelection(answers) {
+  for (const answer of answers) {
+    answer.checked = false;
+  }
+}
