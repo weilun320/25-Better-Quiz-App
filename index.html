@@ -16,9 +16,9 @@
 
 <body>
   <div class="p-3 p-lg-5 bg-dark">
-    <div class="container-fluid">
-      <h1 class="text-info mb-3">Quiz App</h1>
-      <div class="container-fluid mb-4 bg-primary-subtle p-3 rounded-3">
+    <div class="container-fluid p-3 rounded-3 bg-secondary-subtle">
+      <h1 class="text-primary mb-3">Quiz App</h1>
+      <div class="container-fluid shadow mb-4 bg-primary-subtle p-3 rounded-3">
         <h4>Question 1: What is the capital of Japan?</h4>
         <div class="form-check">
           <input class="form-check-input" type="radio" name="question-1" id="kyoto" value="kyoto">
@@ -44,9 +44,9 @@
             Nagoya
           </label>
         </div>
-        <p class="mt-2" id="answer-1"></p>
+        <p class="mt-2 fw-semibold" id="answer-1"></p>
       </div>
-      <div class="container-fluid mb-4 bg-primary-subtle p-3 rounded-3">
+      <div class="container-fluid shadow mb-4 bg-primary-subtle p-3 rounded-3">
         <h4>Question 2: Which of the following is not a NBA team?</h4>
         <div class="form-check">
           <input class="form-check-input" type="radio" name="question-2" id="man-city" value="man-city">
@@ -72,9 +72,9 @@
             Chicago Bulls
           </label>
         </div>
-        <p class="mt-2" id="answer-2"></p>
+        <p class="mt-2 fw-semibold" id="answer-2"></p>
       </div>
-      <div class="container-fluid mb-4 bg-primary-subtle p-3 rounded-3">
+      <div class="container-fluid shadow mb-4 bg-primary-subtle p-3 rounded-3">
         <h4>Question 3: What is the colour of the sky?</h4>
         <div class="form-check">
           <input class="form-check-input" type="radio" name="question-3" id="green" value="green">
@@ -100,9 +100,9 @@
             Blue
           </label>
         </div>
-        <p class="mt-2" id="answer-3"></p>
+        <p class="mt-2 fw-semibold" id="answer-3"></p>
       </div>
-      <div class="container-fluid mb-4 bg-primary-subtle p-3 rounded-3">
+      <div class="container-fluid shadow mb-4 bg-primary-subtle p-3 rounded-3">
         <h4>Question 4: Which character is not from Marvel Studios?</h4>
         <div class="form-check">
           <input class="form-check-input" type="radio" name="question-4" id="doctor-strange" value="doctor-strange">
@@ -128,9 +128,9 @@
             Iron Man
           </label>
         </div>
-        <p class="mt-2" id="answer-4"></p>
+        <p class="mt-2 fw-semibold" id="answer-4"></p>
       </div>
-      <div class="container-fluid mb-4 bg-primary-subtle p-3 rounded-3">
+      <div class="container-fluid shadow mb-4 bg-primary-subtle p-3 rounded-3">
         <h4>Question 5: Who is the founder of Microsoft?</h4>
         <div class="form-check">
           <input class="form-check-input" type="radio" name="question-5" id="elon-musk" value="elon-musk">
@@ -156,15 +156,17 @@
             Mark Zuckerberg
           </label>
         </div>
-        <p class="mt-2" id="answer-5"></p>
+        <p class="mt-2 fw-semibold" id="answer-5"></p>
       </div>
       <div class="mb-3">
         <button type="button" class="me-3 btn btn-success" onclick="checkAnswer()">Check Answer</button>
         <button type="button" class="btn btn-danger" onclick="resetAll()">Reset</button>
       </div>
-      <p class="fs-5 text-light" id="score"></p>
+      <p class="fs-5" id="score"></p>
     </div>
   </div>
+
+  <footer class="bg-dark p-3 text-light text-center">&copy; 2023 Wei Lun. All right reserved.</footer>
 
   <script src="script.js"></script>
 </body>
