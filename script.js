@@ -25,22 +25,22 @@ function checkAnswer() {
   // Set score message
   switch(score) {
     case 1:
-      scoreMessage = `<span class="fw-semibold text-primary">Poor</span> 👎🏻. Your score is <span class="fw-semibold text-primary">${score}</span>/5.`;
+      scoreMessage = `<span class="fw-bold text-info">Poor</span> 👎🏻. Your score is <span class="fw-bold text-info">${score}</span>/5.`;
       break;
     case 2:
-      scoreMessage = `<span class="fw-semibold text-primary">Fair</span> 👌🏻. Your score is <span class="fw-semibold text-primary">${score}</span>/5.`;
+      scoreMessage = `<span class="fw-bold text-info">Fair</span> 👌🏻. Your score is <span class="fw-bold text-info">${score}</span>/5.`;
       break;
     case 3:
-      scoreMessage = `<span class="fw-semibold text-primary">Average</span> 👍🏻. Your score is <span class="fw-semibold text-primary">${score}</span>/5.`;
+      scoreMessage = `<span class="fw-bold text-info">Average</span> 👍🏻. Your score is <span class="fw-bold text-info">${score}</span>/5.`;
       break;
     case 4:
-      scoreMessage = `<span class="fw-semibold text-primary">Good</span> 😎. Your score is <span class="fw-semibold text-primary">${score}</span>/5.`;
+      scoreMessage = `<span class="fw-bold text-info">Good</span> 😎. Your score is <span class="fw-bold text-info">${score}</span>/5.`;
       break;
     case 5:
-      scoreMessage = `<span class="fw-semibold text-primary">Excellent</span> 🤩! Your score is <span class="fw-semibold text-primary">${score}</span>/5.`;
+      scoreMessage = `<span class="fw-bold text-info">Excellent</span> 🤩! Your score is <span class="fw-bold text-info">${score}</span>/5.`;
       break;
     default:
-      scoreMessage = `<span class="fw-semibold text-primary">Terrible</span> 😭. Your score is <span class="fw-semibold text-primary">${score}</span>/5.`;
+      scoreMessage = `<span class="fw-bold text-info">Terrible</span> 😭. Your score is <span class="fw-bold text-info">${score}</span>/5.`;
       break;
   }
 
